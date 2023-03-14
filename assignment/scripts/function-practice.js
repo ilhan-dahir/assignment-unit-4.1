@@ -15,31 +15,41 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  return;
+  return 'Hello ' + name + '!';
 }
 // Remember to call the function to test
-
+console.log('in helloName', helloName('Ann'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber ) {
+  let answer = firstNumber + secondNumber;
+  return answer
   // return firstNumber + secondNumber;
-}
+} //end addNumbers
+console.log('in addNumbers 4 plus 5 is', addNumbers(4, 5));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
+function multiplyThree( firstNumber, secondNumber, thridNumber ) {
+  let answer = firstNumber * secondNumber * thridNumber;
+  //return 3 numbers
+  return answer
+} // end multiply
+console.log('in addNumbers 4 * 5 * 6 is', multiplyThree(4, 5, 6));
 
-}
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true; // return true if greater than zero
   }
-    return;
-}
+  else {
+    return false ; // false
+  } //end 
+} //end isPositive
+
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -50,8 +60,20 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
-}
+  // array greater then zero
+  if ( array.length > 0){
+    //set lastItem to arraylength minus 1 to return value
+    let lastItem = array[array.length - 1];
+    return lastItem
+  } // end
+  
+  else {  //empty array
+  return undefined
+  } 
+}// end getLast
+// cats array to test
+let cats = ['cat1', 'cat2', 'cat3', 'cat4'];
+console.log('in getLast', getLast(cats))
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
