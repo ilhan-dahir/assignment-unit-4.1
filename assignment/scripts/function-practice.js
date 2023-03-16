@@ -27,6 +27,8 @@ function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
 } //end addNumbers
 console.log('in addNumbers 4 plus 5 is', addNumbers(4, 5));
+console.log('in addNumbers 15 plus 45 is', addNumbers(15, 45));
+
 
 
 // 4. Function to multiply three numbers & return the result
@@ -35,7 +37,7 @@ function multiplyThree( firstNumber, secondNumber, thridNumber ) {
   //return 3 numbers
   return answer
 } // end multiply
-console.log('in addNumbers 4 * 5 * 6 is', multiplyThree(4, 5, 6));
+console.log('in multipleThree 4 * 5 * 6 is', multiplyThree(4, 5, 6));
 
 
 
@@ -78,9 +80,29 @@ console.log('in getLast', getLast(cats))
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
-}
+function find(value, array) {
+  //set a found variable to test against later
+  let found = false; 
+  //check value in array
+  //return true if value is found && set found to true
+  for (i = 0; i < array.length; i++) {
+    if (value === array[i]) {
+      found = true;
+      return true;
+    }// end if
+ }
+ //if nothing was found, and variable remained false return false
+ if(found === false){
+  return false;
+ }
+} //end find
+let fruit = ['apples', 'banana', 'grape'];
+console.log(`list fruit array ${fruit}`)
+console.log('Is banana in fruit array:', find('banana' ,fruit));
+console.log('Is grape in fruit array:', find('grape' ,fruit));
+console.log('Is orange in fruit array:', find('orange' ,fruit));
+
+
 
 // ----------------------
 // Stretch Goals
